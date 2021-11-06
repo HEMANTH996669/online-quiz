@@ -1,0 +1,57 @@
+*{
+   margin: 1px;
+   padding: 0;
+   background-color: gray;
+}
+
+#welcome{
+  height: 595px;
+  width: 1360px;
+  padding-top: 60px;
+  background-color: gray;
+  font-size: 35px;
+  color:#3300CC;
+  text-align: center;
+  font-family: sans-serif inherit ;
+
+}
+#Start{
+  background-color:#CC1550;
+  color: gray;
+  font-size: 25px;
+  padding: 12px;
+  margin: 10px;
+
+}
+
+#Q1,#Q2,#Q3,#Q4,#Q5,#Q6,#Q7,#Q8,#Q9,#Q10{
+  padding-top: 135px;
+  padding-left: 20px;
+  background-color: #FFFFFF;
+  height: 517px;
+  padding-right: 20px;
+
+}
+
+#Score{
+  height: 595px;
+  width: 1360px;
+  padding-top: 60px;
+  background-color: #FFFFFF;
+  font-size: 35px;
+  color:#3300CC;
+  text-align: center;
+  font-family: sans-serif inherit ;
+
+
+}
+
+
+.submit{
+  background-color: green;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  margin: 20px;
+  margin-right: 50px;
+  x;

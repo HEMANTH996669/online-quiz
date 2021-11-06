@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>JS Answers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+      .input-group{
+          size
+      }  
+  .jumbotron {
+    background-color: black;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+      .col-xs-4{
+          align-items: center;
+      }
+  .navbar {
+    margin-bottom: 0;
+    background-color: black;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: paleturquoise !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+
+    </div>
+    
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1 style="color:#BB9E41">QUZZERIO</h1> 
+  <p>We specialize in placements</p> 
+  <form>
+      <div class="col-xs-4"></div>
+    <div class="col-xs-4">
+   
+    </div>
+  </form>
+</div>
+<h1 style="color:#BB9E41;padding-left:70px;text-decoration: underline">Answers</h1>
+<div class="container">
+<div class="container mt-3">
+  <h2>Q1) Javascript is a :</h2>
+  <ul class="list-group">
+    <li class="list-group-item">A. Programming Language</li>
+    <li class="list-group-item">B. Rendering Language</li>
+    <li class="list-group-item" style="background-color: lightgreen">C. Scripting Language</li>
+    <li class="list-group-item">D. both programming and scripting Language</li>
+  </ul>
+  
+ <h2>Answer:C</h2>
+  <div class="d-flex p-3 bg-secondary text-white">  
+    
+    <p>Explanation Its a Scripting Language.</p>
+  </div>
+  <h2>Q2) Which tag contains javascript code :</h2>
+  <ul class="list-group">
+    <li class="list-group-item">A. body
+</li>
+    <li class="list-group-item">B. style</li>
+    <li class="list-group-item">C. code
+</li>
+    <li class="list-group-item" style="background-color: lightgreen">D. script
+</li>
+  </ul>
+  <h2>Answer:D</h2>
+  <div class="d-flex p-3 bg-secondary text-white">  
+    
+    <p> Explanation JS code is written under script tags.</p>
+  </div>
+ 
+    <h2>Q3) Which attribute of script tag is used for adding external javascript file :</h2>
+  <ul class="list-group">
+    <li class="list-group-item">A. href</li>
+    <li class="list-group-item" style="background-color: lightgreen">B. src</li>
+    <li class="list-group-item">C. id
+</li>
+    <li class="list-group-item">D. style
+</li>
+  </ul>
+  <h2>Answer:B</h2>
+  <div class="d-flex p-3 bg-secondary text-white">  
+    
+    <p>Explanation src-source helps us to add external files.</p>
+  </div>
+  
+
+      <h2>Q4) Which of the following is a javascript comment:</h2>
+  <ul class="list-group">
+    <li class="list-group-item">A. %%This is a comment</li>
+    <li class="list-group-item">B. **This is a comment</li>
+    <li class="list-group-item" style="background-color: lightgreen">C. //This is a comment
+</li>
+    <li class="list-group-item">D. #This is a comment
+</li>
+  </ul>
+  <h2>Answer:C</h2>
+  <div class="d-flex p-3 bg-secondary text-white">  
+    
+    <p>Explanation // is used for single line and /* */ is used for multi line.</p>
+  </div>
+  
+
+      <h2>Q5) Which keyword is used to tell javascript that we are going to work with a variable:</h2>
+  <ul class="list-group">
+    <li class="list-group-item">A. int
+</li>
+    <li class="list-group-item" style="background-color: lightgreen">B. var</li>
+    <li class="list-group-item">C. variable
+</li>
+    <li class="list-group-item">D. vrb
+</li>
+  </ul>
+  <h2>Answer:B</h2>
+  <div class="d-flex p-3 bg-secondary text-white">  
+    
+    <p>Explanation var stands for Variable as all variables in javascript are treated as objects. </p>
+  </div>
+  
+
+        <h2>Q6) What characters cannot be used in variable name :</h2>
+  <ul class="list-group">
+    <li class="list-group-item" style="background-color: lightgreen">A. Special Symbols(%,#,$...)
+</li>
+    <li class="list-group-item">B. Underscore sign(_)</li>
+    <li class="list-group-item">C. Numbers
+</li>
+    <li class="list-group-item">D. Letters
+</li>
+  </ul>
+  <h2>Answer:A</h2>
+  <div class="d-flex p-3 bg-secondary text-white">  
+    
+    <p>Explanation specials characters cannpt be used.</p>
+  </div>
+  
+
+          <h2>Q7) Increment and Decrement operators are used for :
+</h2>
+  <ul class="list-group">
+    <li class="list-group-item" style="background-color: lightgreen">A. Adding or subtracting 1 from a number
+</li>
+    <li class="list-group-item">B. To change the sign of a number</li>
+    <li class="list-group-item">C.To set the reaminder of the division of two numbers
+</li>
+    <li class="list-group-item">D. None of the above
+</li>
+  </ul>
+  <h2>Answer:A</h2>
+  <div class="d-flex p-3 bg-secondary text-white">  
+    
+    <p>Explanation As a++ means a=a+1 and b-- means b=b-1.</p>
+  </div>
+  
+
+            <h2>Q8) Logical AND(&&) returns true if :
+</h2>
+  <ul class="list-group">
+    <li class="list-group-item" style="background-color: lightgreen">A. Both operands are true
+</li>
+    <li class="list-group-item">B. 
+If only one of the operands is true</li>
+    <li class="list-group-item">C.If one of the operands is true, but not both 
+</li>
+    <li class="list-group-item">D.none
+
+</li>
+  </ul>
+  <h2>Answer:A</h2>
+  <div class="d-flex p-3 bg-secondary text-white">  
+    
+    <p>Explanation According to truth table T^T is true.</p>
+  </div>
+  
+ 
+              <h2>Q9) What is the output of this code :<br>
+var x = "50";<br>
+var y = "100";<br>
+document.write(x+y);
+</h2>
+  <ul class="list-group">
+    <li class="list-group-item" style="background-color: lightgreen">A.150
+</li>
+    <li class="list-group-item">B. 50100</li>
+    <li class="list-group-item">C.NAN
+
+</li>
+    <li class="list-group-item">D.NULL
+
+</li>
+  </ul>
+  <h2>Answer:A</h2>
+  <div class="d-flex p-3 bg-secondary text-white">  
+    
+    <p>Explanation both are treated as integers</p>
+  </div>
+
+              <h2>Q10 The else statement is created to:
+</h2>
+
+  <ul class="list-group">
+    <li class="list-group-item">A.Ignore the condition testing
+</li>
+    <li class="list-group-item" style="background-color: lightgreen">B. 
+Tell javascript to execute something if the condition is false</li>
+    <li class="list-group-item">C.
+Test a new condition for true or false
+
+</li>
+    <li class="list-group-item">D.all the above
+
+</li>
+  </ul>
+  <h2>Answer:B</h2>
+  <div class="d-flex p-3 bg-secondary text-white">  
+    
+    <p>Explanation if yes the 1 else 2.</p>
+  </div>
+  
+  </div>
+</div>
+
+
+
+</body>
+</html>

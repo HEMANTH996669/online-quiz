@@ -1,0 +1,416 @@
+
+<!DOCTYPE HTML>
+<html>
+ <head>
+
+   <title >Quiz</title>
+   <script>
+    var res = 0;
+
+function start(n) {
+  switch (n) {
+    case 0:document.getElementById("welcome").style.display = "none";
+           document.getElementById('Q1').style.display ="block";
+           document.getElementById('timer').style.display="block";
+      break;
+
+    case 1:if(document.myform1.options[3].checked)
+              res++;
+           document.getElementById("Q1").style.display = "none";
+           document.getElementById('Q2').style.display = "block";
+      break;
+
+    case 2:if(document.myform2.options[1].checked)
+              res++;
+           document.getElementById("Q2").style.display = "none";
+           document.getElementById('Q3').style.display = "block";
+      break;
+
+    case 3:if(document.myform3.options[0].checked)
+               res++;
+           document.getElementById("Q3").style.display = "none";
+           document.getElementById('Q4').style.display = "block";
+      break;
+
+    case 4:if(document.myform4.options[0].checked)
+               res++;
+           document.getElementById("Q4").style.display = "none";
+           document.getElementById('Q5').style.display = "block";
+      break;
+
+    case 5:if(document.myform5.options[1].checked)
+               res++;
+           document.getElementById("Q5").style.display = "none";
+           document.getElementById('Q6').style.display = "block";
+      break;
+
+    case 6:if(document.myform6.options[1].checked)
+                res++;
+            document.getElementById("Q6").style.display = "none";
+            document.getElementById('Q7').style.display = "block";
+
+      break;
+
+    case 7:if(document.myform7.options[0].checked)
+                res++;
+            document.getElementById("Q7").style.display = "none";
+            document.getElementById('Q8').style.display = "block";
+
+      break;
+
+    case 8:if(document.myform8.options[3].checked)
+                res++;
+            document.getElementById("Q8").style.display = "none";
+            document.getElementById('Q9').style.display = "block";
+
+      break;
+
+    case 9:if(document.myform9.options[1].checked)
+                res++;
+            document.getElementById("Q9").style.display = "none";
+            document.getElementById('Q10').style.display = "block";
+
+
+      break;
+
+    case 10:if(document.myform10.options[0].checked)
+                res++;
+            document.getElementById('timer').style.display="none";
+            document.getElementById("Q10").style.display = "none";
+            document.getElementById("Score").style.display="block";
+            if(res==10)
+            document.getElementById('10').innerHTML="Congratulations";
+            else if(res<6)
+            document.getElementById('10').innerHTML="Need hard Work";
+            else
+            document.getElementById('10').innerHTML="Keep it up";
+            document.getElementById('result').innerHTML=res;
+
+      break;
+
+   }
+}
+
+function back(n) {
+  switch (n) {
+
+    case 1:
+           document.getElementById("Q1").style.display = "block";
+           document.getElementById('Q2').style.display = "none";
+      break;
+
+    case 2:
+           document.getElementById("Q3").style.display = "none";
+           document.getElementById('Q2').style.display = "block";
+      break;
+
+    case 3:
+           document.getElementById("Q4").style.display = "none";
+           document.getElementById('Q3').style.display = "block";
+      break;
+
+    case 4:
+           document.getElementById("Q5").style.display = "none";
+           document.getElementById('Q4').style.display = "block";
+      break;
+
+    case 5:
+           document.getElementById("Q6").style.display = "none";
+           document.getElementById('Q5').style.display = "block";
+      break;
+
+    case 6:
+            document.getElementById("Q7").style.display = "none";
+            document.getElementById('Q6').style.display = "block";
+
+      break;
+
+    case 7:
+            document.getElementById("Q8").style.display = "none";
+            document.getElementById('Q7').style.display = "block";
+
+      break;
+
+    case 8:
+            document.getElementById("Q9").style.display = "none";
+            document.getElementById('Q8').style.display = "block";
+
+      break;
+
+    case 9:
+            document.getElementById("Q10").style.display = "none";
+            document.getElementById('Q9').style.display = "block";
+        break;
+
+    case 10:
+            document.getElementById("Score").style.display = "none";
+            document.getElementById("Q10").style.display="block";
+            if(res==10)
+            document.getElementById('10').innerHTML="Congratulations";
+            else if(res<6)
+            document.getElementById('10').innerHTML="Need hard Work";
+            else
+            document.getElementById('10').innerHTML="Keep it up";
+            document.getElementById('result').innerHTML=res;
+
+      break;
+
+   }
+}
+ function endtest(){
+     document.getElementById('timer').style.display="none";
+     document.getElementById("Q1").style.display="none";
+     document.getElementById("Q2").style.display="none";
+     document.getElementById("Q3").style.display="none";
+     document.getElementById("Q4").style.display="none";
+     document.getElementById("Q5").style.display="none";
+     document.getElementById("Q6").style.display="none";
+     document.getElementById("Q7").style.display="none";
+     document.getElementById("Q8").style.display="none";
+     document.getElementById("Q9").style.display="none";
+     document.getElementById("Q10").style.display="none";
+            document.getElementById("Score").style.display="block";
+            if(res==10)
+            document.getElementById('10').innerHTML="Congratulations";
+            else if(res<6)
+            document.getElementById('10').innerHTML="Need hard Work";
+            else
+            document.getElementById('10').innerHTML="Keep it up";
+            document.getElementById('result').innerHTML=res;
+ }
+</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+*{
+   margin: 1px;
+   padding: 0;
+   background-color:aliceblue;
+}
+
+#welcome{
+  height:654px;
+  width: auto;
+  padding-top: 60px;
+  background-color: gray;    
+  font-size: 35px;
+  color:#3300CC;
+  text-align: center;
+  font-family:sans-serif serif ;
+
+}
+#Start{
+  background-color:#CC1550;
+  color: gray;
+  font-size: 25px;
+  padding: 12px;
+  margin: 10px;
+
+}
+
+#Q1,#Q2,#Q3,#Q4,#Q5,#Q6,#Q7,#Q8,#Q9,#Q10{
+  padding-top: 30px;
+  padding-left: 50px;
+  background-color:brown;
+  height:650px;
+  padding-right:60px;
+ border:2px;  
+}
+
+#Score{
+  height: 700px;
+  width: 1500px;
+  padding-top: 60px;
+  background-color:cornflowerblue;
+  font-size: 60px;
+  color:blueviolet;
+  text-align: center;
+  font-family: sans-serif;
+}
+</style>
+
+</head>
+<body>
+    <div align="center" id="timer" style="font-weight:bold;display: none"></div>
+<script>
+      var total=60*5;
+       var min= parseInt(total/60);
+       var sec= parseInt(total%60);
+       function checkTime(){
+           document.getElementById('timer').innerHTML='Time Left :'+min+' minutes '+sec+' seconds';
+           if(total<=0){
+                setTimeout('endtest()',1);
+           }else{
+               total=total-1;
+               min=parseInt(total/60);
+               sec=parseInt(total%60);
+               setTimeout("checkTime()",1000);
+           }
+          }
+       setTimeout("checkTime()",1000);
+</script>
+   <div id="welcome">
+     <h1 style="color:#3300CC;font-family: algerian;font-size:60px" > WELCOME TO JAVA<br> QUIZ </h1>
+     <br><h1 id="wel"></h1><br>
+     <input class="btn btn-primary btn-lg" type="button" value="Start Quiz" onclick="start(0)">
+   </div>
+    
+   <div id="Q1">
+     <form name="myform1" onsubmit="Marks(1)">
+       <h1>Q1 What of the following is the default value of a local variable?<br><br></h1>
+         <h2><b><input id="1" type="radio" name="options" value="Programming"><label for="1">null</label><br><br>
+             <input id="2" type="radio" name="options" value="Rendering"><label for="2">0</label><br><br>
+             <input id="3" type="radio" name="options" value="Scripting"><label for="3"> not assigned</label><br><br>
+             <input id="4" type="radio" name="options" value="Both"><label for="4"> depends up on variable</label></b></h2><br><br>
+         <p align="center"><input class="btn btn-success" type="button" value="Next" onclick="start(1)"></p>
+     </form>
+   </div>
+
+   <div id="Q2">
+     <form name="myform2" onsubmit="Marks(2)">
+       <h1>Q2  What is the default value of Boolean variable?<br><br></h1>
+         <h2><b><input id=5 type="radio" name="options" value="body"><label for="5"> true</label><br><br>
+             <input id="6" type="radio" name="options" value="style"><label for="6"> false</label><br><br>
+             <input id="7" type="radio" name="options" value="code"><label for="7"> not defined</label><br><br>
+             <input id="8" type="radio" name="options" value="script"><label for="8"> null</label></b></h2><br><br>
+        <p align="center"><input class="btn btn-success" type="button" value="Back" onclick="back(1)">
+         <input class="btn btn-success" type="button" value="Next" onclick="start(2)">
+         </p>
+       </form>
+   </div>
+
+   <div id="Q3">
+     <form name="myform3" onsubmit="Marks(3)">
+       <h1>Q3  When static binding occurs?<br><br></h1>
+         <h2><b><input id="9"type="radio" name="options" value="href"><label for="9">load time</label><br><br>
+           <input id="10"type="radio" name="options" value="src"><label for="10">runtime</label><br><br>
+             <input id="11"type="radio" name="options" value="id"><label for="11">compile time</label><br><br>
+           <input id="12" type="radio" name="options" value="style"><label for="12">none of the above</label></b></h2><br><br>
+       <p align="center"><input class="btn btn-success" type="button" value="Back" onclick="back(2)">
+         <input class="btn btn-success" type="button" value="Next" onclick="start(3)">
+         </p>
+     </form>
+   </div>
+
+   <div id="Q4">
+     <form name="myform4" onsubmit="Marks(4)">
+       <h1>Q4 What is the default value of int variable?<br><br></h1>
+         <h2><b><input id="13"type="radio" name="options" value="%%"><label for="13">0</label><br><br>
+             <input id="14"type="radio" name="options" value="**"><label for="14"> 0.0</label><br><br>
+             <input id="15"type="radio" name="options" value="//"><label for="15"> not defined</label><br><br>
+             <input id="16"type="radio" name="options" value="#"><label for="16"> null</label></b></h2><br><br>
+       <p align="center"><input class="btn btn-success" type="button" value="Back" onclick="back(3)">
+         <input class="btn btn-success" type="button" value="Next" onclick="start(4)">
+         </p>
+     </form>
+   </div>
+
+   <div id="Q5">
+     <form name="myform5" >
+       <h1>Q5 Which of the following is a thread safe?<br><br></h1>
+         <h2><b><input type="radio" name="options" id="17" value="int"><label for="17"> string builder</label><br><br>
+             <input type="radio" name="options" id="18"value="var"><label for="18"> string buffer</label><br><br>
+             <input type="radio" name="options" id="19"value="variable"><label for="19"> both</label><br><br>
+             <input type="radio" name="options" id="20"value="vrb"><label for="20"> none of the above</label></b></h2><br><br>
+      <p align="center"><input class="btn btn-success" type="button" value="Back" onclick="back(4)">
+         <input class="btn btn-success" type="button" value="Next" onclick="start(5)">
+         </p>
+     </form>
+   </div>
+
+   <div id="Q6">
+     <form name="myform6" >
+       <h1>Q6  In which case, a program is expected to recover?<br><br></h1>
+         <h2><b><input type="radio" name="options"id="21" value="special"><label for="21">none of the above</label><br><br>
+             <input type="radio" name="options" id="22"value="underscore"><label for="22"> if an error occurs</label><br><br>
+             <input type="radio" name="options" id="23"value="number"><label for="23"> if an exception occurs</label><br><br>
+             <input type="radio" name="options" id="24"value="letter"><label for="24"> both</label></b></h2><br><br>
+       <p align="center"><input class="btn btn-success" type="button" value="Back" onclick="back(5)">
+         <input class="btn btn-success" type="button" value="Next" onclick="start(6)">
+         </p>
+     </form>
+   </div>
+
+   <div id="Q7">
+     <form name="myform7" >
+       <h1>Q7 What is the size of long variable?<br><br></h1>
+         <h2><b><input type="radio" name="options" id="25"value="addsub"><label for="25"> 8 bit</label><br><br>
+             <input type="radio" name="options" id="26"value="sign"><label for="26"> 16 bit</label><br><br>
+             <input type="radio" name="options" id="27"value="remainder"><label for="27"> 32 bit</label><br><br>
+             <input type="radio" name="options" id="28"value="none"><label for="28"> 64 bit</label></b></h2><br><br>
+       <p align="center"><input class="btn btn-success" type="button" value="Back" onclick="back(6)">
+         <input class="btn btn-success" type="button" value="Next" onclick="start(7)">
+         </p>
+     </form>
+   </div>
+
+   <div id="Q8">
+     <form name="myform8" >
+       <h1>Q8 Method Overriding is an example of<br><br></h1>
+         <h2><b><input type="radio" name="options" id="29"value="both"><label for="29"> dynamic binding</label><br><br>
+             <input type="radio" name="options"id="30" value="only1"><label for="30"> static binding</label><br><br>
+             <input type="radio" name="options" id="31"value="one"><label for="31"> both</label><br><br>
+             <input type="radio" name="options" value="None"id="32"><label for="32"> None of the above</label></b></h2><br><br>
+       <p align="center"><input class="btn btn-success" type="button" value="Back" onclick="back(7)">
+         <input class="btn btn-success" type="button" value="Next" onclick="start(8)">
+         </p>
+     </form>
+   </div>
+
+   <div id="Q9">
+     <form name="myform9" >
+       <h1>Q9) Which of the following is faster ?<br><br></h1>
+         <h2><b><input type="radio" name="options" id="33"value="150"><label for="33"> String </label><br><br>
+             <input type="radio" name="options" id="34"value="50100"><label for="34"> String Builder</label><br><br>
+             <input type="radio" name="options" id="35"value="nan"><label for="35"> String Buffer</label><br><br>
+             <input type="radio" name="options"id="36" value="Null "><label for="36">All are same</label></b></h2><br><br>
+      <p align="center"><input class="btn btn-success" type="button" value="Back" onclick="back(8)">
+         <input class="btn btn-success" type="button" value="Next" onclick="start(9)">
+         </p>
+     </form>
+   </div>
+
+   <div id="Q10">
+     <form name="myform10" >
+       <h1>Q10 What is a marker interface?<br><br></h1>
+         <h2><b><input type="radio" id="37"name="options" value="ignore"><label for="37">with no method</label><br><br>
+             <input type="radio"id="38" name="options" value="tell"><label for="38"> with single method</label> <br><br>
+             <input id="39"type="radio" name="options" value="test"><label for="39"> both</label><br><br>
+             <input id="40"type="radio" name="options" value="all "><label for="40"> none of the above</label></b></h2><br><br>
+      <p align="center"><input class="btn btn-success" type="button" value="Back" onclick="back(9)">
+         <input class="btn btn-success" type="button" value="Next" onclick="start(10)">
+         </p>
+     </form>
+   </div>
+
+
+   <div id="Score">
+     <h1 id="10"></h1><br>
+     <h1>Your Score is </h1>
+     <h1 id="result"></h1>
+	 <a href="javaprogramanswres.html"><input class="btn btn-success" type="button" value="View Answers" style="text-align:center"></a>
+   </div>
+
+
+
+   <script>
+     document.getElementById("Q1").style.display="none";
+     document.getElementById("Q2").style.display="none";
+     document.getElementById("Q3").style.display="none";
+     document.getElementById("Q4").style.display="none";
+     document.getElementById("Q5").style.display="none";
+     document.getElementById("Q6").style.display="none";
+     document.getElementById("Q7").style.display="none";
+     document.getElementById("Q8").style.display="none";
+     document.getElementById("Q9").style.display="none";
+     document.getElementById("Q10").style.display="none";
+     document.getElementById("Score").style.display="none";
+    </script>
+</body>
+
+</html>
